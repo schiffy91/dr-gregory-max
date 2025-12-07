@@ -1,0 +1,26 @@
+:root {
+    /* Typography */
+    --font-heading: 'Cormorant Garamond', serif;
+    --font-body: 'Libre Baskerville', 'Georgia', serif;
+    --font-sans: 'Futura', 'Century Gothic', 'Tw Cen MT', sans-serif;
+
+    /* Colors */
+    --ny-red: #d0021b;
+    --ny-black: #121212;
+    --paper-white: #fcfcfc;
+
+    /* Semantic Mappings */
+    --color-paper: var(--paper-white);
+    --color-ink: var(--ny-black);
+    --color-accent: var(--ny-red);
+
+    /* Spacing */
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 4rem;
+
+    /* Layout */
+    --max-width: 1200px;
+    --content-width: 65ch;
+}

@@ -1,0 +1,77 @@
+# Build directories
+build/
+external/
+
+# CMake
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+compile_commands.json
+
+# IDE
+.vscode/.cmaketools.json
+.vscode/launch.json.user
+.vs/
+.idea/
+*.swp
+*.swo
+*~
+
+# macOS
+.DS_Store
+._*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+*~
+.nfs*
+
+# Compiled binaries
+*.exe
+*.out
+*.app
+*.dll
+*.so
+*.dylib
+
+# Object files
+*.o
+*.obj
+*.lo
+*.slo
+
+# Static libraries
+*.a
+*.lib
+
+# Shared libraries
+*.so
+*.dylib
+*.dll
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Virtual environments
+.venv/
+
+# Logs
+*.log
+
+# Test outputs
+/tmp/
+resources/test/output/*
+!resources/test/output/.gitkeep
+
+# Server temp files
+src/server/uploads/*
+!src/server/uploads/.gitkeep
+src/server/results/*
+!src/server/results/.gitkeep

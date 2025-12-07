@@ -1,0 +1,330 @@
+/* Main Styles */
+
+body {
+    background-color: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-body);
+    font-size: 1.125rem;
+    line-height: 1.6;
+    padding: var(--spacing-md);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: var(--spacing-md);
+}
+
+h1 {
+    font-family: var(--font-heading);
+    font-size: 5rem;
+    font-weight: 400;
+    line-height: 1;
+    text-align: center;
+    margin-top: var(--spacing-lg);
+    margin-bottom: var(--spacing-sm);
+    letter-spacing: -1px;
+}
+
+h2 {
+    font-size: 3rem;
+    border-bottom: 1px solid var(--color-accent);
+    padding-bottom: var(--spacing-sm);
+    margin-top: var(--spacing-md);
+}
+
+h3,
+h4 {
+    margin-top: 1.5rem;
+}
+
+a {
+    color: var(--color-accent);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s;
+}
+
+a:hover {
+    border-bottom-color: var(--color-accent);
+}
+
+/* Typography Extras */
+.strapline,
+.date-line {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: var(--spacing-xs);
+    display: block;
+    text-align: center;
+    font-weight: 600;
+}
+
+.deck {
+    font-family: var(--font-heading);
+    font-style: italic;
+    color: #666;
+    font-size: 1.25rem;
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.caption {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 0.8rem;
+    color: #666;
+    margin-top: var(--spacing-xs);
+}
+
+/* Images & Figures */
+figure {
+    margin: 0;
+    padding: 0;
+    border: 1px solid #ddd;
+    padding: 4px;
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    border-radius: 12px;
+}
+
+figure img {
+    border-radius: 8px;
+    display: block;
+    max-width: 100%;
+    height: auto;
+    filter: sepia(10%) contrast(95%); /* Subtle vintage feel */
+}
+
+figcaption {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 0.85rem;
+    color: #555;
+    text-align: center;
+    padding-top: 8px;
+    font-style: italic;
+}
+
+.figure-float-right {
+    float: right;
+    margin-left: var(--spacing-md);
+    margin-bottom: var(--spacing-sm);
+    max-width: 40%;
+    clear: right;
+}
+
+.figure-float-left {
+    float: left;
+    margin-right: var(--spacing-md);
+    margin-bottom: var(--spacing-sm);
+    max-width: 40%;
+    clear: left;
+}
+
+.figure-centered {
+    display: block;
+    margin: var(--spacing-md) auto;
+    max-width: 80%;
+}
+
+.figure-full {
+    display: block;
+    margin: var(--spacing-lg) 0;
+    width: 100%;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Layout */
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+}
+
+@media (min-width: 768px) {
+    .container {
+        grid-template-columns: 2fr 1fr;
+        grid-template-areas:
+            "header header"
+            "main sidebar"
+            "footer footer";
+        gap: var(--spacing-xl);
+    }
+
+    header {
+        grid-area: header;
+    }
+
+    main {
+        grid-area: main;
+        border-right: 1px solid #ddd;
+        padding-right: var(--spacing-xl);
+    }
+
+    aside {
+        grid-area: sidebar;
+        border-left: none;
+        padding-left: 0;
+    }
+
+    footer {
+        grid-area: footer;
+    }
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: var(--spacing-md);
+    border-bottom: 4px double black;
+    padding-bottom: var(--spacing-md);
+}
+
+.subtitle {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-style: italic;
+    margin-top: var(--spacing-sm);
+    color: var(--color-accent);
+}
+
+/* Cubist Hero */
+.cubist-hero {
+    width: 100%;
+    margin-top: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+    display: block;
+}
+
+@media (min-width: 768px) {
+    .cubist-hero {
+        width: 100%;
+        margin-left: 0;
+        margin-bottom: var(--spacing-lg);
+        margin-top: var(--spacing-md);
+    }
+}
+
+.hero-image {
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+    object-fit: cover;
+    display: block;
+    /* Border radius handled by figure img */
+}
+
+.drop-cap::first-letter {
+    font-family: var(--font-heading);
+    font-size: 4rem;
+    float: left;
+    line-height: 0.8;
+    padding-right: var(--spacing-sm);
+    color: var(--color-accent);
+}
+
+/* Sidebar */
+aside {
+    font-family: var(--font-heading);
+}
+
+.sidebar-item {
+    margin-bottom: var(--spacing-lg);
+    border-top: 4px solid black;
+    padding-top: var(--spacing-md);
+}
+
+.sidebar-label {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--color-ink);
+    margin-bottom: var(--spacing-sm);
+    display: block;
+    font-weight: bold;
+}
+
+/* Sidebar Specifics */
+.contact-phone {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-top: 0.5rem;
+}
+
+.contact-note {
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+    font-style: italic;
+}
+
+.license-list {
+    list-style: disc;
+    padding-left: 1rem;
+    margin-top: 0.5rem;
+}
+
+.disclaimer {
+    font-size: 0.75rem;
+    margin-top: 0.5rem;
+    color: #666;
+}
+
+/* Components */
+.booking-btn {
+    display: inline-block;
+    background-color: transparent;
+    border: 1px solid black;
+    color: black;
+    padding: 0.5rem 1rem;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.booking-btn:hover {
+    color: red;
+    border-color: red;
+}
+
+.notice-box {
+    background-color: #f5f5f5;
+    border-left: 4px solid #999;
+    padding: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+    font-style: italic;
+}
+
+/* Footer */
+footer {
+    border-top: 1px solid #ddd;
+    padding-top: var(--spacing-lg);
+    text-align: center;
+    font-size: 0.875rem;
+    margin-top: var(--spacing-xl);
+}
+
+.license-info {
+    font-style: italic;
+    margin-top: var(--spacing-sm);
+}
