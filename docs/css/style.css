@@ -155,7 +155,28 @@ figcaption {
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr;
+    grid-template-areas:
+        "header"
+        "sidebar"
+        "main"
+        "footer";
     gap: var(--spacing-lg);
+}
+
+header {
+    grid-area: header;
+}
+
+main {
+    grid-area: main;
+}
+
+aside {
+    grid-area: sidebar;
+}
+
+footer {
+    grid-area: footer;
 }
 
 @media (min-width: 768px) {
@@ -168,24 +189,14 @@ figcaption {
         gap: var(--spacing-xl);
     }
 
-    header {
-        grid-area: header;
-    }
-
     main {
-        grid-area: main;
         border-right: 1px solid #ddd;
         padding-right: var(--spacing-xl);
     }
 
     aside {
-        grid-area: sidebar;
         border-left: none;
         padding-left: 0;
-    }
-
-    footer {
-        grid-area: footer;
     }
 }
 
